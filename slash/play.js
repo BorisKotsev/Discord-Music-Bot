@@ -1,6 +1,6 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageEmbed } = require("discord.js")
-const { QueryType } = require("@discord-player")
+const { SlashCommandBuilder } = require(`@discordjs/builders`)
+const { MessageEmbed } = require(`discord.js`)
+const { QueryType } = require(`@discord-player`)
 
 modeule.exports = {
     data: new SlashCommandBuilder()

@@ -1,9 +1,10 @@
-const Discord = require("discord.js")
-const dotnev = require("dotenv")
-const { REST } = require("@discordjs/rest")
-const { Routes } = require("discord-api-types/v9")
-const fs = require("fs")
+const Discord = require(`discord.js`)
+const dotnev = require(`dotenv`)
+const { REST } = require(`@discordjs/rest`)
+const { Routes } = require(`discord-api-types/v9`)
+const fs = require(`fs`)
 const { Player } = require("discord-player")
+const { Client, GatewayIntentBits } = require('discord.js')
 
 dotnev.config()
 
@@ -15,7 +16,10 @@ const CLIENT_ID = "998851992719982644" //Bot ID
 const GUILD_ID = "998854222223265812" // Server ID
 
 const client = new Discord.Client({
-    intents: ["GUILDS", "GUILD_VOICE_STATES"]
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+    ]
 })
 
 client.slashCommands = new Discord.Collection()
